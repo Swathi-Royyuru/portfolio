@@ -6,7 +6,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
-import { FormsModule } from '@angular/forms';
+
 import { CommonModule } from '@angular/common';
 import { CartItem } from '../cart/cart.service';
 import { ScrollUpComponent } from '../scroll-up/scroll-up.component';
@@ -49,7 +49,6 @@ interface SurpriseBag {
     MatIconModule,
     MatButtonModule,
     MatInputModule,
-    FormsModule,
     ScrollUpComponent
   ],
   templateUrl: './restaurant-detail.component.html',
