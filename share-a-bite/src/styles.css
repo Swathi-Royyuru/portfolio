@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+.mat-mdc-select-panel {
+  background: white important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  margin-top: 4px;
+  border-radius: 4px !important;
+  box-shadow: 0 2px 4px -1px rgba(0,0,0,0.2), 
+              0 4px 5px 0 rgba(0,0,0,0.14), 
+              0 1px 10px 0 rgba(0,0,0,0.12) !important;
+}
+
+.mat-mdc-option {
+  color: rgba(0, 0, 0, 0.87) !important;
+  min-height: 48px;
+}
+
+.mat-mdc-option:hover:not(.mdc-list-item--disabled),
+.mat-mdc-option:focus:not(.mdc-list-item--disabled) {
+  background: rgba(0, 0, 0, 0.04) !important;
+}
+
+.mat-mdc-option.mdc-list-item--selected:not(.mat-mdc-option-multiple) {
+  background: rgba(76, 98, 222, 0.08) !important;
+}
+
+.mat-mdc-select-value {
+  color: inherit !important;
+}
+
+.mat-mdc-select-arrow {
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  router-outlet {
+    flex: 1;
+  }

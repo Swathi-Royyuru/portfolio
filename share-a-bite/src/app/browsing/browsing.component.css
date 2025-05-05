@@ -1,0 +1,93 @@
+  
+.restaurant-card {
+  width: 80%;
+  height: 300px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin-top: 50px;
+  border-radius: 30px;
+
+  &:hover {
+    transform: translateY(-10px) scale(1.1); /* Pop-up effect */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    z-index: 1; /* Bring hovered card to front */
+  }
+
+  img {
+    height: 60%;
+    object-fit: cover;
+  }
+
+  mat-card-content {
+    padding: 7px;
+
+    h3 {
+      margin: 0 0 8px 0;
+      font-size: 1.1rem;
+    }
+
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      margin-bottom: 5px;
+
+      mat-icon {
+        color: #FFD700;
+        font-size: 18px;
+        height: 18px;
+        width: 18px;
+      }
+
+      span:last-child {
+        margin-left: 4px;
+        color: #666;
+        font-size: 0.9rem;
+      }
+    }
+
+    .cuisine {
+      color: #555;
+      margin: 0 0 4px 0;
+      font-size: 0.9rem;
+    }
+
+    .info {
+      color: #777;
+      margin: 0;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.filter-section {
+  display: flex;
+  gap: 20px;
+  padding: 5px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  margin-left: 68%;
+  margin-top: 20px;
+  border-radius: 20px;
+}
+
+.restaurants-container {
+  min-height: calc(100vh - 150px); /* Adjust based on your header/footer */
+  position: relative;
+}
+
+mat-grid-list {
+  transition: opacity 0.3s ease;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.no-results {
+  position: absolute;
+  font-size: 20px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

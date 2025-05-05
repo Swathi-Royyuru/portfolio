@@ -1,0 +1,47 @@
+<div class="cart-container">
+    <mat-card *ngIf="cartItems.length > 0">
+      <mat-card-header>
+        <mat-card-title>Your Surprise Bag Order</mat-card-title>
+        <mat-card-subtitle>{{cartItems[0].restaurantName}}</mat-card-subtitle>
+      </mat-card-header>
+      
+      <mat-card-content>
+        <mat-list>
+          <mat-list-item>
+            <h3 mat-line>{{cartItems[0].item.name}} ({{cartItems[0].quantity}})</h3>
+            <p mat-line>{{cartItems[0].item.description}}</p>
+            <p mat-line *ngFor="let content of cartItems[0].item.contents">{{content}}</p>
+            <p mat-line class="price">${{cartItems[0].totalPrice | number:'1.2-2'}}</p>
+            <button mat-icon-button (click)="removeItem()">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+        
+        <div class="payment-section">
+          <h3>Payment Method</h3>
+          <mat-radio-group [(ngModel)]="paymentMethod" (change)="updateCart()">
+            <mat-radio-button value="pay_on_pickup" color="primary" [checked]="true">
+              Pay on Pickup
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+        
+        <div class="total">
+          <h3>Total: ${{total | number:'1.2-2'}}</h3>
+        </div>
+      </mat-card-content>
+      
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="placeOrder()">Place Order</button>
+        <button mat-raised-button routerLink="/">Continue Shopping</button>
+      </mat-card-actions>
+    </mat-card>
+  
+    <mat-card *ngIf="cartItems.length === 0">
+      <mat-card-content>
+        <p>Your cart is empty</p>
+        <button mat-raised-button color="primary" routerLink="/">Browse Restaurants</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
