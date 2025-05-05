@@ -52,7 +52,7 @@ interface SurpriseBag {
     ScrollUpComponent
   ],
   templateUrl: './restaurant-detail.component.html',
-  styleUrls: ['./restaurant-detail.component.scss']
+  styleUrls: ['./restaurant-detail.component.css']
 })
 export class RestaurantDetailComponent implements OnInit {
  

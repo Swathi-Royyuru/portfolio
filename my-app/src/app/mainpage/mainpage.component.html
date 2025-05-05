@@ -1,19 +1,59 @@
-<div class="center-content">
-  <h4>Together, we nourish!</h4>
-  <h5>bringing surplus goodness to those who need it most</h5>
-
-  <div class="search-wrapper">
-    <div class="input-with-button">
-      <input #addressInput id="autocomplete" type="text" placeholder="Enter your address" />
-      <button class="go-btn" (click)="updateMap(addressInput.value)">&#10148;</button>
+<!-- home.component.html -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1>Smart Food Waste Management</h1>
+    <p class="subtitle">Track, Analyze, and Reduce food waste with our powerful tools</p>
+    <div class="cta-buttons">
+      <button mat-raised-button color="primary" routerLink="/signup">Get Started</button>
+      <button mat-stroked-button color="primary" routerLink="/demo">See Demo</button>
     </div>
   </div>
-
-  <div class="map-container" *ngIf="mapUrl">
-    <iframe src="https://storage.googleapis.com/maps-solutions-xirezl8oo6/neighborhood-discovery/19he/neighborhood-discovery.html"
-  width="100%" height="100%"
-  style="border:0;"
-  loading="lazy">
-</iframe>
+  <div class="hero-image">
+    <img src='assets/images/waste.png' alt="Food waste reduction illustration">
   </div>
-</div>
+</section>
+
+<section class="stats-section">
+  <h2>The Global Food Waste Problem</h2>
+  <div class="stats-grid">
+    <div class="stat-card" *ngFor="let stat of stats">
+      <mat-icon aria-hidden="true">{{stat.icon}}</mat-icon>
+      <h3>{{stat.value}}</h3>
+      <p>{{stat.label}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="features-section">
+  <h2>How We Can Help</h2>
+  <div class="features-grid">
+    <mat-card *ngFor="let feature of features">
+      <mat-card-header>
+        <div mat-card-avatar class="feature-icon">
+          <mat-icon aria-hidden="true">{{feature.icon}}</mat-icon>
+        </div>
+        <mat-card-title>{{feature.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{feature.description}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<section class="testimonials-section">
+  <h2>What Our Users Say</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card" *ngFor="let testimonial of testimonials">
+      <mat-icon class="quote-icon">format_quote</mat-icon>
+      <p class="quote">{{testimonial.quote}}</p>
+      <p class="author">- {{testimonial.author}}</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <h2>Ready to Make a Difference?</h2>
+  <p>Join thousands of businesses and households reducing their food waste footprint</p>
+  <button mat-raised-button color="accent" routerLink="/signup">Start Your Journey Today</button>
+</section>

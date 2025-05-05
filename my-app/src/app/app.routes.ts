@@ -4,6 +4,7 @@ import { SignUpComponent } from './signup/signup.component';
 import { SignInComponent } from './signin/signin.component';
 
 
+
 export const appRoutes: Routes = [
   { path: '',
     loadComponent: () => import('./mainpage/mainpage.component').then(m => m.MainpageComponent)
@@ -35,6 +36,10 @@ export const appRoutes: Routes = [
   {
     path: 'cart', 
     loadComponent: () => import('./cart/cart.component').then(m => m.CartComponent)
+  },
+  {
+    path: 'support', 
+    loadComponent: () => import('./support/support.component').then(m => m.SupportComponent)
   },
   
 ];

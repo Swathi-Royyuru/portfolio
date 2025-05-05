@@ -25,7 +25,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FormsModule,  
     ReactiveFormsModule],
   templateUrl: './browsing.component.html',
-  styleUrls: ['./browsing.component.scss']
+  styleUrls: ['./browsing.component.css']
 })
 export class BrowsingComponent {
   restaurants: Restaurant[] = [

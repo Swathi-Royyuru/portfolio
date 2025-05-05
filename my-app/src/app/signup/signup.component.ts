@@ -29,7 +29,7 @@ import { MatOptionModule } from '@angular/material/core';
     MatOptionModule
   ],
   templateUrl: './signup.component.html',
-  styleUrls: ['./signup.component.scss']
+  styleUrls: ['./signup.component.css']
 })
 export class SignUpComponent {
   signUpForm: FormGroup;
