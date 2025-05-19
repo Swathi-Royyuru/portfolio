@@ -1,0 +1,17 @@
+<div class="container">
+   <div class="background-image">
+        <div class="layered-pattern">
+            <div class="layer" (click)="navigateTo('about')">ABOUT</div>
+            <div class="layer" (click)="navigateTo('about')">EXPERIENCE</div>
+            <div class="layer" data-section="projects">PROJECTS</div>
+            <div class="layer" data-section="interests">INTERESTS</div>
+            <div class="layer" data-section="contact">CONTACT</div>
+        </div>
+    </div>
+      <router-outlet></router-outlet>
+   <footer>
+        <p>Copyright &copy; 2025 Swathi Royyuru. All rights reserved</p>
+    </footer>
+  
+</div>
+

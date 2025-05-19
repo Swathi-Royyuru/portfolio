@@ -1,0 +1,62 @@
+<div class="container">
+   
+   <header class="header">
+       <div class="header-text">
+            <h1><b>I'M SWATHI ROYYURU</b></h1>
+            <div class="designation-container">
+                <span class="designation" id="designation"></span>
+            </div>
+        </div>
+    </header>
+
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">⬆</button>
+</div>
+
+<!-- Add this script right before closing body tag -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const phrases = ["WEB DEVELOPER", "PROJECT MANAGER", "DATA ANALYST"];
+    const textElement = document.getElementById("designation");
+    
+    if (!textElement) {
+        console.error("Designation element not found!");
+        return;
+    }
+    
+    let currentIndex = 0;
+    const typingSpeed = 100; // milliseconds per character
+    const eraseSpeed = 50; // milliseconds per character when erasing
+    const pauseBetween = 1000; // milliseconds between phrases
+    
+    function typeWriter(text, i, cb) {
+        if (i < text.length) {
+            textElement.textContent += text.charAt(i);
+            setTimeout(() => typeWriter(text, i + 1, cb), typingSpeed);
+        } else {
+            setTimeout(cb, pauseBetween);
+        }
+    }
+    
+    function eraseText(cb) {
+        const currentText = textElement.textContent;
+        if (currentText.length > 0) {
+            textElement.textContent = currentText.substring(0, currentText.length - 1);
+            setTimeout(() => eraseText(cb), eraseSpeed);
+        } else {
+            cb();
+        }
+    }
+    
+    function animateText() {
+        const text = phrases[currentIndex];
+        currentIndex = (currentIndex + 1) % phrases.length;
+        
+        typeWriter(text, 0, () => {
+            eraseText(animateText);
+        });
+    }
+    
+    // Start animation
+    animateText();
+});
+</script>
