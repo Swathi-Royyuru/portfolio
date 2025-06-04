@@ -1,0 +1,358 @@
+#home {
+    background-image: url('/1.png');
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;  /* viewport width */
+    height: 100vh; /* viewport height */
+    background-attachment: fixed;     
+    overflow-x: hidden;
+ }
+
+
+ @media (max-width: 768px) {
+  .background-image {
+    background-attachment: scroll; /* Prevent jank on mobile */
+  }
+}
+
+
+
+/* Header Adjustments */
+.header {
+    position: absolute;
+    left: 15%; /* Adjust based on layers width */
+    top: 35%;
+    transform: translateY(-50%);
+    color: rgb(219, 215, 215);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    z-index: 999;
+    background-color: transparent !important;
+    text-align: left;
+    width: 70%;
+
+}
+.header-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 3px;
+        overflow: visible !important;
+        word-break: break-word;
+}
+
+@media (max-width: 1024px) {
+    .header {
+        left: 30%;
+        width: 80%;
+    }
+
+    .header-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* Scroll Button Positioning */
+#scrollTopBtn {
+    position: fixed; /* Changed from sticky */
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    /* rest of your styles */
+}
+
+/* Optimize Background Loading */
+@media (max-width: 768px) {
+    .home {
+        background-attachment: scroll;
+    }
+}
+
+
+/* Make sure header text container doesn't clip the animation */
+.header-text {
+    overflow: visible;
+}
+
+.about-section {
+  background-image: url('/6.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Ensure section takes full height of viewport */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.about-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.8); /* semi-transparent black */
+  z-index: 0; /* Sits behind content but above image */
+}
+
+.profile-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.profile-content {
+  flex: 1;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section-title {
+  color: #94b1f6;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+  padding-top: 2.5%;
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+}
+
+.intro {
+  font-size: 1.5rem;
+  margin: 0;
+  color: #ffffffc9;
+  padding-top: 2%;
+}
+
+.role {
+  font-size: 1.25rem;
+  color: #e0e0e0ce;
+  margin: 1rem 0 2rem;
+}
+
+.description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  line-height: 1.6;
+  padding-right: 7%;
+  text-align: justify;
+}
+
+.button-group {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+
+.btn.primary {
+  background-color: #ffaa33;
+  color: #000;
+}
+
+.btn.outline {
+  border: 2px solid #ffaa33;
+  color: #ffaa33;
+  background-color: transparent;
+}
+
+.btn.primary:hover {
+  background-color: #ff9900;
+}
+
+.btn.outline:hover {
+  background-color: #ffaa33;
+  color: #000;
+}
+
+.experience-section {
+  background-image: url('/6.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: block; /* CHANGED from flex */
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.experience-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.8);
+  z-index: 0;
+
+
+}
+
+.experience-section .section-title {
+  position: relative;
+  z-index: 1;
+  color: #94b1f6;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 15%;
+  padding-bottom: 3%;
+ 
+}
+
+.experience-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 70%;
+  margin: 0 auto;
+ z-index: 1;
+ 
+}
+
+.experience-card {
+  background-color: #2a2a2d;
+  padding: 25px 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  flex: 1 0 3rem;
+  max-width: 30%;
+  color: #e2e2e2;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+}
+
+.company-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  
+}
+
+.job-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffaa33;
+  margin-bottom: 8px;
+}
+
+.company-name {
+  font-size: 1rem;
+  color: #94b1f6;
+  margin-bottom: 5px;
+}
+
+.job-duration {
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  text-align: justify;
+}
+
+.projects-section {
+  background-image: url('/6.jpg');
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
+  display: block; /* CHANGED from flex */
+  position: relative;
+  left: 0;
+  top: 0;
+}
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(7, 7, 7, 0.8);
+  z-index: 0;
+
+
+}
+
+.projects-section .section-title {
+  position: relative;
+  z-index: 1;
+  color: #94b1f6;
+  font-size: 1.75rem;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+  text-underline-offset: 0.75rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding-left: 15%;
+  padding-bottom: 3%;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  max-width: 70%;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.project-card {
+  background-color: #2a2a2d;
+  padding: 25px 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  flex: 1 0 3rem;
+  max-width: 30%;
+  color: #e2e2e2;
+  transition: transform 0.3s ease;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #ffaa33;
+  margin-bottom: 8px;
+}
+
+

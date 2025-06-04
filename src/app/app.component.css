@@ -1,0 +1,124 @@
+
+.main-button {
+    position: fixed;
+    top: 1%;
+    left: 2.5%;
+    font-size: 2rem; /* or try 32px, 40px, etc. */
+    cursor: pointer;
+    z-index: 99;
+}
+.main-button:hover {
+    color: #94b1f6;
+    text-shadow: 0 0 16px rgba(148, 177, 246, 0.7);
+  
+}
+
+
+
+@media (max-width: 768px) {
+    .layered-pattern {
+        display: none; /* Hide on mobile for better usability */
+    }
+    .header {
+        padding-left: 30px;
+    }
+}
+
+
+/* Scroll Button Positioning */
+#scrollTopBtn {
+    position: fixed; /* Changed from sticky */
+    bottom: 20px;
+    right: 20px;
+    /* rest of your styles */
+}
+
+/* Optimize Background Loading */
+@media (max-width: 768px) {
+    .home {
+        background-attachment: scroll;
+    }
+}
+
+/* Layered Pattern Styles */
+.layered-pattern {
+    position: fixed;
+    left: 0;
+    top: 52%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 500;
+    padding-left: 40px;
+}
+
+.layer {
+    writing-mode:vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    color: rgba(255, 255, 255, 0.837);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    padding: 15px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    background-color: rgba(13, 14, 15, 0.718);
+    border-radius: 0 5px 5px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
+}
+
+.layer:hover {
+    color: #94b1f6;
+    background-color: rgba(148, 177, 246, 0.3);
+    transform: rotate(180deg) translateX(5px);
+        color: #ffffff;
+    background-color: rgba(148, 177, 246, 0.5);
+    transform: rotate(180deg) translateX(15px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(148, 177, 246, 0.4);
+    text-shadow: 0 0 8px rgba(148, 177, 246, 0.7);
+    z-index: 10;
+}
+
+.layer::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #94b1f6;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s ease;
+    
+}
+
+.layer:hover::after {
+    transform: scaleY(1);
+}
+
+/* Animation for the layers */
+@keyframes slideIn {
+    from {
+        transform: rotate(180deg) translateX(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(180deg) translateX(0);
+        opacity: 1;
+    }
+}
+
+.layer:nth-child(1) { animation: slideIn 0.5s ease 0.1s both; }
+.layer:nth-child(2) { animation: slideIn 0.5s ease 0.2s both; }
+.layer:nth-child(3) { animation: slideIn 0.5s ease 0.3s both; }
+.layer:nth-child(4) { animation: slideIn 0.5s ease 0.4s both; }
+.layer:nth-child(5) { animation: slideIn 0.5s ease 0.5s both; }
+
