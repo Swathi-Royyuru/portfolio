@@ -16,12 +16,11 @@ export class AppComponent {
     this.router.navigate(['/' + path]);
   }
 
-  scrollToSection(sectionId: string): void {
-  const el = document.getElementById(sectionId);
-  if (el) {
-    el.scrollIntoView({ behavior: 'smooth' });
+scrollToSection(sectionId: string): void {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
   }
+
 }
-
-
 }

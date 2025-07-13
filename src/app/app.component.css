@@ -75,10 +75,7 @@
 }
 
 .layer:hover {
-    color: #94b1f6;
-    background-color: rgba(148, 177, 246, 0.3);
-    transform: rotate(180deg) translateX(5px);
-        color: #ffffff;
+    color: #ffffff;
     background-color: rgba(148, 177, 246, 0.5);
     transform: rotate(180deg) translateX(15px) scale(1.1);
     box-shadow: 0 10px 25px rgba(148, 177, 246, 0.4);
