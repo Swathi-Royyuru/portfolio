@@ -1,4 +1,6 @@
-
+.container {
+    overflow-x: hidden;
+}
 .main-button {
     position: fixed;
     top: 1%;

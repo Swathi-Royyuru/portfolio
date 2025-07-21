@@ -1,141 +1,244 @@
 
-
+<div class="container">
   <!-- Main Section -->
   <section id="home" >
-    <div class="background-image"></div>
     <header class="header">
       <div class="header-text">
         <h1><b>I'M SWATHI ROYYURU</b></h1>
         <div class="designation-container">
-          <span class="designation" id="designation"></span>
-        </div>
+  <span class="designation" id="designation"> 👩‍💻 Web Developer | 🎨 UI/UX Desginer | 🤖 AI Enthusiast</span>
+</div>
       </div>
     </header>
     
   </section>
 
-    
+ <!-- About Section (Single Container, Project/Interest Style) -->
 <section id="about" class="about-section">
-    <div class="profile-section">
-      <div class="profile-content">
-        <h2 class="section-title">ABOUT ME</h2>
-        <p class="intro">Hello! I am <strong>Swathi</strong></p>
-        <h3 class="role">Web Developer & Information Systems Graduate</h3>
-        <p class="description">
-   
-  👩‍💻 I began my professional career in 2021 as a Backend Java Developer at Capgemini Technology Services Ltd., Bengaluru. Over the course of two years, I contributed to the development and maintenance of enterprise-grade software solutions for global clients, including Siemens Healthineers and Mercedes Benz R&D. <br><br>
+  <div class="about-content">
+    <h2 class="section-title glitch" data-text="ABOUT ME">About Me</h2>
+    
+    <div class="intro-wrapper">
+      <p class="intro">Hello! I am <span class="name-highlight">Swathi</span></p>
+      <h3 class="role">Web Developer & Information Systems Graduate</h3>
+    </div>
 
-  📖 In 2024, I embarked on a new academic path by pursuing Master’s in Information Systems at Saint Louis University (SLU), with a strong focus on bridging technology and business strategy. My academic journey is enriching my understanding of key areas such as data analytics, cybersecurity, enterprise systems, web development and project management. Outside the classroom, I actively engage in university-led tech events, career development workshops, and innovation challenges.<br><br>
-
-  💡 I’m passionate about using technology to drive efficiency, solve meaningful problems, and create real-world impact. Whether it's optimizing backend processes or analyzing business needs, I aim to build solutions that are both technically sound and user-centric.<br><br>
-
-    </p>
-    <p class="description">
-      I'm deeply involved in data analytics, cybersecurity, and enterprise systems — always seeking opportunities to grow.
-    </p>
-   <div class="button-group">
-          <a href="Swathi_R_Resume.pdf" class="btn primary">Download CV</a>
-          <a href="#" class="btn outline">Hire Me</a>
+    <!-- Single Container (Similar to Projects/Interests) -->
+    <div class="about-container"
+         [class.active]="activeAbout !== null"
+         (mouseenter)="setActiveAbout(1)"
+         (mouseleave)="clearActiveAbout()">
+      
+      <!-- Background Image (Optional) -->
+      <div class="about-bg" [style.background-image]="'url(/about-bg.jpg)'"></div>
+      
+      <!-- Overlay -->
+      <div class="about-overlay"></div>
+      
+      <!-- Content -->
+      <div class="about-details">
+        <div class="about-icon">
+          <i class="fas fa-user"></i> <!-- Main icon -->
+        </div>
+        
+        <div class="about-text">
+          <div *ngFor="let item of aboutItems" class="about-paragraph">
+            <p [innerHTML]="item.text"></p>
+          </div>
         </div>
       </div>
     </div>
-  </section>
 
-<section id="experience" class="experience-section">
-     <div class="experience-content">
-  <h2 class="section-title">EXPERIENCE</h2>
-  <div class="experience-cards">
-    <div class="experience-card">
-      <img src="siemens.jpg" alt="Siemens Healthineers Logo" class="company-logo">
-      <h3 class="job-title">Backend Java Developer</h3>
-      <p class="company-name">Siemens Healthineers (Capgemini) - Bengaluru, IND</p>
-      <p class="job-duration">2021 – 2023</p>
-      <p class="job-description">
-       Contributed to 40+ tasks in a Scrum team using Jira, focusing on backend development for Oracle CPQ CRM. Used Java 8, Git, Jenkins, and SQL databases. Completed 13 sprints, implemented JWT-based security, and collaborated across teams while documenting key features.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <img src="MBRDI.jpeg" alt="Mercedes Benz Logo" class="company-logo">
-      <h3 class="job-title">Frontend Developer</h3>
-      <p class="company-name">Mercedes Benz R&D India (Capgemini) - Bengaluru, IND</p>
-      <p class="job-duration">2023 – 2023</p>
-      <p class="job-description">
-        Demonstrated 2 years of backend development using Java and Spring Boot, while managing 10+ Angular components with HTML, TypeScript, CSS, and Bootstrap. Built RESTful APIs, implemented data binding, event handling, and routing. Resolved bugs from 50+ test reports and maintained technical documentation.
-      </p>
-    </div>
- 
-
-  <div class="experience-card">
-    <img src="excelerate.jpeg" alt="Excelerate Experiential Learning Logo" class="company-logo">
-      <h3 class="job-title">Project Manager Intern </h3>
-      <p class="company-name">Excelerate Experiential Learning - St Louis, USA</p>
-      <p class="job-duration">2025 – 2025</p>
-      <p class="job-description">
-       Led a 14-member global team across 5 countries to plan a $30K international event with 650 attendees. Applied leadership and risk analysis to cut projected losses by 70%. Created project and team charters, and Gantt charts to define roles, optimize resources, and reduce delays by 30%.
-      </p>
-    </div>
-
-    <div class="experience-card">
-      <img src="excelerate.jpeg" alt="Excelerate Experiential Learning Logo" class="company-logo">
-      <h3 class="job-title">Associate Analyst Intern </h3>
-      <p class="company-name">Excelerate Experiential Learning - St Louis, USA</p>
-      <p class="job-duration">2025 – 2025</p>
-      <p class="job-description">
-Analyzed 6 datasets for trends and built 2 interactive dashboards to present insights. Designed an ETL workflow for accurate data integration into a Master table and contributed to weekly team discussions.      </p>
+    <!-- Buttons -->
+    <div class="button-group">
+      <a href="Swathi_R_Resume.pdf" class="btn primary pulse">Download CV</a>
+      <a href="#contact" class="btn outline">Hire Me</a>
     </div>
   </div>
+</section>
+<section id="experience" class="experience-section">
+  <div class="experience-content">
+    <h2 class="section-title" data-text="EXPERIENCE">Experience</h2>
+    
+    <div class="experience-timeline">
+      <!-- Experience Item 1 -->
+      <div class="experience-item" *ngFor="let exp of experiences" 
+           [class.active]="activeExp === exp.id"
+           (mouseenter)="setActiveExp(exp.id)"
+           (mouseleave)="clearActiveExp()">
+        <div class="timeline-badge">
+          <img [src]="exp.logo" [alt]="exp.company + ' Logo'" class="company-logo">
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <h3 class="job-title">{{exp.title}}</h3>
+            <div class="company-meta">
+              <span class="company-name">{{exp.company}}</span>
+              <span class="job-duration">{{exp.duration}}</span>
+            </div>
+          </div>
+          <p class="job-description">{{exp.description}}</p>
+          <div class="job-tech">
+            <span *ngFor="let tech of exp.technologies">{{tech}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<section id="projects"  class="projects-section">
+<section id="projects" class="projects-section">
   <div class="projects-content">
-    <h2 class="section-title">PROJECTS</h2>
-    <div class="project-cards">
-      <div class="project-card">
-        <h3 class="project-title">E-Commerce Web Design</h3>
-        <p class="project-description">Created a blueprint of an e-commerce website using figma, featuring a fully interactive prototype of a complete shopping experience from product browsing to checkout. This prototype includes navigation links between pages, smooth animate transitions, horizontal product scrolling and button interactions. <br><br><br>
-           <a class="project-link"
-           href="https://www.figma.com/proto/IxD4hMyQYxvA3aRhSVMF40/Week5-Web-Design--Community-?node-id=1-3542&starting-point-node-id=1%3A3542&t=kCPUiWe9Hy76vvm4-1" 
-           target="_blank" rel="noopener noreferrer">... view prototype</a></p>
-      </div>
-      <div class="project-card">
-        <h3 class="project-title">Food Waste Management Webapp</h3>
-        <p class="project-description">Share-a-Bite is a web application built with Angular to combat food waste. It connects restaurants with surplus food to users looking for affordable meals. The app features Google Maps integration for location-based food discovery. Users can browse, reserve, and collect surprise food bags from nearby places. Designed for sustainability, it encourages community sharing and zero waste. <br>
-           <a class="project-link"
-           href="https://share-a-bite-nine.vercel.app/" 
-           target="_blank" rel="noopener noreferrer">... view site</a></p>
-      </div>
-      <div class="project-card">
-        <h3 class="project-title">Data Analysis at HiRise</h3>
-        <p class="project-description">Conducted a literature review to identify factors influencing brand awareness in marketing contexts.
-Used R Studio to clean, analyze, and visualize client data related to engagement and campaign reach.
-Performed inferential statistical tests: t-test and linear regression.
-Analyzed how marketing spend, content frequency, and user interaction affected brand recognition.</p>
+    <h2 class="section-title glitch" data-text="PROJECTS">Projects</h2>
+    
+    <div class="projects-grid">
+      <div class="project-card" *ngFor="let project of projects" 
+           [class.active]="activeProject === project.id"
+           (mouseenter)="setActiveProject(project.id)"
+           (mouseleave)="clearActiveProject()">
+        <div class="card-image" [style.background-image]="'url(' + project.image + ')'"></div>
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <h3 class="project-title">{{project.title}}</h3>
+          <p class="project-description">{{project.description}}</p>
+          <div class="project-tech">
+            <span *ngFor="let tech of project.technologies">{{tech}}</span>
+          </div>
+          <a class="project-link" [href]="project.link" target="_blank" rel="noopener noreferrer">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  </section>
+</section>
 
-  <section id="interests" class="interests-section">
-    <div class="interests-content">
-      <h2 class="section-title">INTERESTS</h2>
-      <p class="interests-description">
-        I am passionate about exploring the intersection of technology and business, with a keen interest in data analytics, cybersecurity, and enterprise systems. I enjoy participating in hackathons, tech meetups, and innovation challenges to continuously learn and apply new skills.
-      </p>
+ <!-- interests-section.component.html -->
+<section id="interests" class="interests-section">
+  <div class="interests-content">
+    <h2 class="section-title glitch" data-text="INTERESTS">Interests</h2>
+    
+    <div class="interests-grid">
+      <div class="interest-card" *ngFor="let interest of interests" 
+           [style.background-image]="'url(' + interest.image + ')'"
+           [class.active]="activeCard === interest.id"
+           (mouseenter)="setActiveCard(interest.id)"
+           (mouseleave)="clearActiveCard()">
+        <div class="card-overlay"></div>
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <i [class]="interest.icon"></i>
+          </div>
+          <h3>{{interest.title}}</h3>
+          <div class="interest-tags">
+            <span *ngFor="let tag of interest.tags">{{tag}}</span>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact-section">
-    <div class="contact-content">
-      <h2 class="section-title">CONTACT</h2>
-      <p class="contact-description">
-        Feel free to reach out to me via email at <a href="mailto:swathi.royyuru@slu.edu">swathi.royyuru&#64;slu.edu</a> or connect with me on <a href="https://www.linkedin.com/in/swathi-royyuru-7054a4137/" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
-
-</p>
+  <section class="contact-section" id="contact">
+  <div class="contact-content">
+    <h2 class="section-title">Get In Touch</h2>
+    <p class="intro">I'd love to hear from you!</p>
+    <p class="role">Whether for work opportunities or just to say hello.</p>
+    
+    <div class="contact-container">
+      <!-- Contact Info Card -->
+      <div class="contact-card">
+        <div class="contact-info">
+          <h3 class="contact-title">Contact Information</h3>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Email</h3>
+              <a href="mailto:royyuruswathi&#64;gmail.com">royyuruswathi&#64;gmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Phone</h3>
+              <a href="tel:+3142204368">+1 (314) 220-4368</a>
+            </div>
+          </div>
+          
+          <div class="contact-method">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-text">
+              <h3>Location</h3>
+              <p>St Louis, MO</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="#" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Contact Form Card -->
+      <div class="contact-card">
+  <h3 class="contact-title">Send Me a Message</h3>
+  <form class="contact-form" id="contactForm">
+    <div class="form-fields">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" class="form-control" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" class="form-control" required></textarea>
+      </div>
     </div>
-  </section>
+    
+    <button type="submit" class="submit-btn">Send Message</button>
+  </form>
+</div>
 
-<button id="scrollTopBtn" (click)="scrollToTop()">
-  ⬆
+    </div>
+  </div>
+</section>
+
+</div>
+
+<button
+  id="scrollTopBtn"
+  (click)="scrollToTop()"
+  title="Go to top"
+  *ngIf="showScrollButton"
+>
+  ↑
 </button>
