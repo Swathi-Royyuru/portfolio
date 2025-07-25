@@ -68,21 +68,21 @@ onWindowScroll() {
       title: 'Tech Explorer',
       icon: 'fas fa-microchip',
       image: 'tech_explorer.webp',
-      tags: ['AI/ML', 'Web3', 'UI/UX']
+      tags: ['AI/ML', 'Generative Design tools', 'AI + UX Analytics']
     },
     {
       id: 2,
       title: 'Creative Mind',
       icon: 'fas fa-paint-brush',
       image: 'https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      tags: ['3D Art', 'Photography', 'Design']
+      tags: ['Art & Craft', 'Music', ' Graphic Design','Baking']
     },
     {
       id: 3,
-      title: 'Knowledge Seeker',
+      title: 'Other Interests',
       icon: 'fas fa-brain',
       image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      tags: ['Courses', 'Books', 'Conferences']
+      tags: ['Watching Movies', 'Volunteering', 'Gardening']
     }
   ];
 
@@ -103,25 +103,33 @@ onWindowScroll() {
       id: 1,
       title: 'E-Commerce Web Design',
       description: 'Created an interactive Figma prototype featuring complete shopping experience with smooth transitions, product browsing, and checkout flow.',
-      image: 'https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      image: 'ecommerce.png',
       link: 'https://www.figma.com/proto/IxD4hMyQYxvA3aRhSVMF40/Week5-Web-Design--Community-?node-id=1-3542&starting-point-node-id=1%3A3542&t=kCPUiWe9Hy76vvm4-1',
       technologies: ['Figma', 'UI/UX', 'Prototyping']
     },
     {
       id: 2,
       title: 'Food Waste Management',
-      description: 'Angular webapp connecting restaurants with surplus food to users, featuring Google Maps integration and sustainable food sharing.',
-      image: 'https://images.unsplash.com/photo-1505576399279-565b52d4ac71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+      description: 'Angular web application connecting restaurants with surplus food to users, to help them get food at lower prices resulting in sustainable food sharing.',
+      image: 'fwm.png',
       link: 'https://share-a-bite-nine.vercel.app/',
-      technologies: ['Angular', 'Google Maps', 'Firebase']
+      technologies: ['Angular', 'Git', 'Bootstrap']
     },
     {
       id: 3,
-      title: 'Data Analysis at HiRise',
-      description: 'Conducted statistical analysis of marketing data using R Studio, identifying key factors affecting brand awareness and campaign reach.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
-      link: '#',
-      technologies: ['R Studio', 'Data Visualization', 'Regression']
+      title: 'Tech Innovators (Project Proposal)',
+      description: 'Designed a client-focused project proposal using Google Sites, featuring intuitive navigation, plan and visuals of project charters, KPIs, and team workflows.',
+      image: 'tech_innov.png',
+      link: 'https://sites.google.com/view/techinnovproject/home?authuser=0',
+      technologies: ['Project Management', 'Google Sites']
+    },
+    {
+      id: 4,
+      title: 'McKesson EA Portfolio',
+      description: 'Designed a Google Site analyzing EA using TOGAF/Archimate and BPMN, with SWOT analysis for IT optimization and impact on operational maturity and agile leadership.',
+      image: 'mckesson.png',
+      link: 'https://sites.google.com/view/mckessondemo/home?authuser=0',
+      technologies: ['EA (TOGAF)', 'BPMN', 'SWOT']
     }
   ];
 

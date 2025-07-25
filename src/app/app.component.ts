@@ -24,4 +24,12 @@ scrollToSection(sectionId: string): void {
   }
 
 }
+
+toggleMenu() {
+    const pattern = document.querySelector('.layered-pattern');
+    if (pattern) {
+        pattern.classList.toggle('active');
+    }
+}
+
 }
