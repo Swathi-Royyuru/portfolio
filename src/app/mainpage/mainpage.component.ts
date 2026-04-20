@@ -26,7 +26,6 @@ interface Experience {
   title: string;
   company: string;
   duration: string;
-  description: string;
   logo: string;
   technologies: string[];
 }
@@ -329,30 +328,35 @@ getSkillOrbitProperties(skill: any): any {
   experiences: Experience[] = [
     {
       id: 1,
-      title: 'Backend Developer',
-      company: 'Community Dreams Foundation (Volunteer) - Remote, United States',
-      duration: 'Feb 2026 – Present',
-      description: 'Contributing as a Java Backend Developer for the Community Dreams Foundation, focusing on the development of the Upskill Learning Platform. Specialized in strengthening system security by resolving complex JWT-based Spring Security bugs, significantly improving authentication reliability.Contributing as a Java Backend Developer for the Community Dreams Foundation, focusing on the development of the Upskill Learning Platform. Specialized in strengthening system security by resolving complex JWT-based Spring Security bugs, significantly improving authentication reliability.',
+      title: 'Software Engineering Lead',
+      company: 'Community Dreams Foundation - Remote, United States',
+      duration: 'Jan 2026 – Present',
       logo: 'CDF.jpg',
       technologies: ['Spring Security', 'JUnit Testing', 'JWT', 'JPA']
     },
     {
       id: 2,
-      title: 'Backend-First Frontend Developer (Angular)',
+      title: 'Software Egnineer',
       company: 'Mercedes Benz R&D India (Capgemini) - Bengaluru, IND',
       duration: 'Mar 2023 – Dec 2023',
-      description: 'Demonstrated 2 years of backend development expertise using Java and Spring Boot, delivering user stories that included 10+ reusable Angular components with responsive Bootstrap layouts, boosting user engagement by 80%. Enhanced front-end performance through advanced DOM manipulation, event handling, form validation, routing, and implementation of 3 RESTful APIs for seamless module communication. Achieved quality targets by analyzing 50+ test reports, identifying and resolving defects, conducting code reviews, and maintaining detailed technical documentation.',
       logo: 'MBRDI.jpeg',
-      technologies: ['Angular', 'TypeScript', 'REST APIs', 'BootStrap']
+      technologies: ['Angular', 'Java', 'REST APIs', 'BootStrap']
     },
     {
       id: 3,
-      title: 'Junior Java Developer (J2EE)',
+      title: 'Software Engineer',
       company: 'Siemens Healthineers (Capgemini) - Bengaluru, IND',
       duration: 'Nov 2021 – Feb 2023',
-      description: 'Delivered impactful contributions to an Oracle Sales Cloud–based CPQ CRM system by resolving 40+ bugs, defects, and user stories using Jira. Improved backend efficiency through advanced Java 8 features (Lambdas, Streams, Functional Interfaces) and enhanced security with JWT-based authorization. Collaborated across three departments during 13 sprints to drive high-quality, agile software delivery.',
       logo: 'siemens.jpg',
       technologies: ['Java 8', 'Oracle CPQ', 'CRM', 'Spring Boot']
+    },
+    {
+      id: 4,
+      title: 'Application Management Intern',
+      company: 'Kakinada Municipal Corporation - Kakinada, IND',
+      duration: 'Jan 2021 – Oct 2021',
+      logo: 'ksc.jpg',
+      technologies: ['Java', 'Spring Boot', 'JWT', 'JPA']
     }
   ];
 
