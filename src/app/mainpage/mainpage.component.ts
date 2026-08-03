@@ -330,17 +330,17 @@ getSkillOrbitProperties(skill: any): any {
       id: 1,
       title: 'Software Engineering Lead',
       company: 'Community Dreams Foundation - Remote, United States',
-      duration: 'Jan 2026 – Present',
+      duration: 'Feb 2026 – Current',
       logo: 'CDF.jpg',
-      technologies: ['Spring Security', 'JUnit Testing', 'JWT', 'JPA']
+      technologies: ['Lovable', 'Supabase', 'React Native', 'Vector Search', 'Next.js', 'FastAPI', 'Project Management']
     },
     {
       id: 2,
-      title: 'Software Egnineer',
+      title: 'Software Engineer',
       company: 'Mercedes Benz R&D India (Capgemini) - Bengaluru, IND',
       duration: 'Mar 2023 – Dec 2023',
       logo: 'MBRDI.jpeg',
-      technologies: ['Angular', 'Java', 'REST APIs', 'BootStrap']
+      technologies: ['Angular', 'Java', 'REST APIs', 'Apache Kafka', 'Bootstrap']
     },
     {
       id: 3,
@@ -349,14 +349,6 @@ getSkillOrbitProperties(skill: any): any {
       duration: 'Nov 2021 – Feb 2023',
       logo: 'siemens.jpg',
       technologies: ['Java 8', 'Oracle CPQ', 'CRM', 'Spring Boot']
-    },
-    {
-      id: 4,
-      title: 'Application Management Intern',
-      company: 'Kakinada Municipal Corporation - Kakinada, IND',
-      duration: 'Jan 2021 – Oct 2021',
-      logo: 'ksc.jpg',
-      technologies: ['Java', 'Spring Boot', 'JWT', 'JPA']
     }
   ];
 
@@ -374,15 +366,20 @@ getSkillOrbitProperties(skill: any): any {
     {
       id: 1,
       icon: 'fas fa-laptop-code',
-      text: '👩‍💻 I began my professional career in 2021 as a Backend Java Developer at Capgemini Technology Services Ltd., Bengaluru. Over two years, I contributed to enterprise-grade software solutions for global clients including Siemens Healthineers and Mercedes Benz R&D.'
+      text: '👩‍💻 I began my professional career in 2021 as a Software Engineer at Capgemini Technology Services Ltd., Bengaluru. Over two years, I contributed to enterprise-grade software solutions for global clients including Siemens Healthineers and Mercedes Benz R&D.'
     },
     {
       id: 2,
       icon: 'fas fa-graduation-cap',
-      text: '📖 In 2024, I pursued a Master\'s in Information Systems at Saint Louis University (SLU), focusing on bridging technology and business strategy. My studies cover data analytics, cybersecurity, enterprise systems, and web development.'
+      text: '📖 In 2024, I pursued a Master\'s in Information Systems at Saint Louis University (SLU), focusing on bridging technology and business strategy. My coursework includes data analytics, cybersecurity, enterprise systems, and web development.'
     },
     {
       id: 3,
+      icon: 'fas fa-globe',
+      text: '🌍 I am currently contributing to Dreamline AI project: a cloud-based energy finance and project management platform, as an EPM and Software Development Engineer.'
+    },
+    {
+      id: 4,
       icon: 'fas fa-lightbulb',
       text: '💡 I\'m passionate about using technology to drive efficiency and solve meaningful problems. Whether optimizing backend processes or analyzing business needs, I aim to build solutions that are technically sound and user-centric.'
     }
